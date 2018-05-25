@@ -1,0 +1,10 @@
+h3 {
+  margin-top: 15px;
+}
+li>span {
+  display: block;
+  color: #383838;
+}
+li>p {
+  color: #383838;
+}

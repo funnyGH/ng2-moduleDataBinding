@@ -1,0 +1,17 @@
+<div [ngClass]="{'div-folder': n==1}">
+  <ul>
+    <li><h3>模版与数据绑定</h3></li>
+    <li><a href="https://www.angular.cn/guide/displaying-data" target="view_window">文档</a></li>
+    <li [routerLink]="['/showData']" routerLinkActive="actived">显示数据</li>
+    <li [routerLink]="['/tempGrammer']" routerLinkActive="actived">模版语法</li>
+    <li [routerLink]="['/lifePeriod']" routerLinkActive="actived">生命周期钩子</li>
+    <li [routerLink]="['/compInterac']" routerLinkActive="actived">组件交互</li>
+    <li [routerLink]="['/compStyle']" routerLinkActive="actived">组件样式</li>
+    <li [routerLink]="['/dynamicComp']" routerLinkActive="actived">动态组件</li>
+    <li [routerLink]="['/attrDirec']" routerLinkActive="actived">属性型指令</li>
+    <li [routerLink]="['/construcDirec']" routerLinkActive="actived">结构型指令</li>
+    <li [routerLink]="['/pipe']" routerLinkActive="actived">管道</li>
+    <li [routerLink]="['/egDemo']" routerLinkActive="actived">实例列举</li>
+  </ul>
+  <p (click)='toggleSlide($event)'>{{val}}</p>
+</div>

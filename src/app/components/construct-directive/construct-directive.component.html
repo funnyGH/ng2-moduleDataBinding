@@ -1,0 +1,132 @@
+<br>
+<p *ngIf='true'>
+  *ngIf="true" => 值为true执行
+</p>
+<br>
+<p *ngIf='fn()'>
+  *ngIf="fn()" => 函数值为true执行
+</p>
+<br>
+<p *ngIf='a > 1'>
+  *ngIf='a > 1' => 表达式值为true执行
+</p>
+<br>
+
+<!-- <h3 class='red'>dom清除后事件重绑定吗？</h3>
+<button type="button" (click)='btnClick(1)'>change status</button>
+<button type="button" *ngIf='isShow' (click)='btnClick(2)'>click me</button> -->
+<br>
+<br>
+
+<!-- <h2>ng-if-then-else</h2>
+<br>
+<h3 class='red'>简单形式</h3> -->
+<!--语法糖-->
+<div *ngIf="show">简单形式</div>
+<!--Angular 2.x中使用template-->
+<ng-template [ngIf]="show"><div>简单形式</div></ng-template>
+<br>
+
+<!-- <h3 class='red'>使用else块</h3>
+<div *ngIf="show; else elseBlock">show</div>
+<ng-template #elseBlock>使用else块</ng-template>
+<br> -->
+
+<!-- <h3 class='red'>应用于select添加项呢？</h3>
+<select name="build">
+  <option *ngIf="!array.length; else elseBlock1" value="">请选择</option>
+  <ng-template #elseBlock1>
+      <option *ngFor="let build of array" [value]="build.id">{{build.value}}</option>
+  </ng-template>
+</select> -->
+
+
+<!-- <h3 class='red'>使用then和else块</h3>
+<div *ngIf="show; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>使用then块</ng-template>
+<ng-template #elseBlock>使用else块</ng-template>
+<br> -->
+
+
+<!-- <h3 class='red'>使用as语法</h3>
+<div *ngIf="show as oas; else elseBlock">{{oas}}</div>
+<ng-template #elseBlock>使用else块</ng-template>
+<br> -->
+
+
+<!-- <h3 class='red'>NgIf 使用示例</h3>
+<button (click)="show = !show">now is {{show ? 'show' : 'hide'}}</button>
+<button (click)="switchPrimary()">change Primary</button>
+    show = {{show}}
+<br>
+<div *ngIf="show; then thenBlock else elseBlock">此处不显示</div>
+<ng-template #primaryBlock>当show = true 时展示</ng-template>
+<ng-template #secondaryBlock>当 primary 隐藏时展示</ng-template>
+<ng-template #elseBlock>当show = false 时展示</ng-template> -->
+<br>
+<br>
+
+
+<!-- <h3 class='red'>display控制显隐</h3>
+<p [style.display]="'block'">
+  display = none 哪里去了？
+</p>
+<p [style.display]="'none'">
+  Expression sets display to "none".
+  This paragraph is hidden but still in the DOM.
+</p> -->
+<br>
+<br>
+
+
+<!-- <h3 class='red'>ngIf as可以接表达式吗？</h3>
+<div *ngIf="show as {{1 | toNumber}}; else elseBlock">ngIf as可以接表达式吗</div>
+<ng-template #elseBlock>使用else块</ng-template>
+<br> -->
+<br>
+<!-- <h3 class='red'>ngFor循环内嵌套的 ngIf 如何加索引变量 index (i)</h3>
+  <ul *ngFor='let item of array; let i = index'>
+    <li *ngIf='i%2 === 1'>
+      <span>下标：{{i}}</span>&nbsp;&nbsp;&nbsp;
+      <span>ID：{{item.id}}</span>&nbsp;&nbsp;&nbsp;
+      <span>value：{{item.value}}</span>
+    </li>
+  </ul> -->
+<br>
+
+<!-- <h3 class='red'>如果是多层呢？</h3>
+<ul *ngFor='let item of oarray.list; let i = index'>
+  <li *ngIf='item.app.id === 22'>
+    <div *ngIf="show; else elseBlock2">
+      <span>index：{{i}}</span><br>
+      <span>ID：{{item.app.id}}</span>
+    </div>
+    <ng-template #elseBlock2>
+      <button (click)="showModal(i)">点击</button>
+    </ng-template>
+  </li>
+</ul> -->
+<br>
+<br>
+
+
+
+<!-- <h3 class='red'>ngFor + ngIf 同时作用于一个DOM？</h3>
+<ul>
+  <li *ngFor='let item of array; let i = index'>
+    <div *ngIf='item.id === 2'>
+      <span>index：{{i}}</span><br>
+      <span>ID：{{item.value}}</span>
+    </div>
+  </li>
+</ul>
+<h1 class='red'>总感觉这不是最好的方法！！！！！因为li是多余的</h1> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

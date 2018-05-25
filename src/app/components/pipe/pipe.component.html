@@ -1,0 +1,79 @@
+<title>管道</title>
+<h2>对管道进行参数化：</h2>
+<p>
+  {{199002020103 | date: 'y-MM-dd EEEE'}}
+</p>
+<br>
+<h3>管道参数化支持哪些格式？</h3>
+<p>
+  {{'格式一：' | eqString: 'string'}}
+</p>
+<p>
+  {{'格式二：' | eqArray: oarray}}
+</p>
+<p>
+  {{'格式三：' | eqObject: oobj}}
+</p>
+<p>
+  {{'格式四：' | eqFn: eventOn}}
+</p>
+
+<br>
+<br>
+<h2>链式管道：</h2>
+<p>
+  {{ 199002020103 | date: 'y-MM-dd EEEE' | uppercase}}
+</p>
+<h3>管道返回值不正常是否会影响后面管道的输入？</h3>
+<p>
+  {{ 'aaa' | eqObject: nObj | toNumber }}
+</p>
+
+<br>
+<br>
+<h2>自定义管道：</h2>
+<p>
+  109002020103：{{ 109002020103 | parseNumChinese: 'chinese'}}
+</p>
+<p>
+  109002020103：{{ 109002020103 | parseNumChineseAnother: 'chinese'}}
+</p>
+<br>
+<br>
+<h2>管道与变更检测：</h2>
+<h3>{{title}}</h3>
+<p>
+  名字:
+  <input type="text" #box (keyup.enter)="addHero(box.value); box.value=''">
+  <input type="checkbox" [(ngModel)]='canFly'>有个性 &nbsp;&nbsp;
+  <input type="checkbox" [(ngModel)]='mutate'>改变数组/还是添加
+</p>
+<p>
+  <button (click)="reset()">Reset</button>
+</p>
+
+<h4 style='color:red'>有个性的人(piped)</h4>
+  <div *ngFor="let hero of (heroes | flyingHeroes)">
+    {{hero.name}}
+  </div>
+<br>
+<br>
+<h4 style='color:red'>所有人(no pipe)</h4>
+  <div *ngFor="let hero of heroes">
+    {{hero.name}}
+  </div>
+<br>
+<br>
+<h4 style='color:red'>有个性的人(pure:false)</h4>
+  <div *ngFor="let hero of (heroes | flyingHeroesImpure)">
+    {{hero.name}}
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

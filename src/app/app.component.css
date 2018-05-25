@@ -1,0 +1,13 @@
+.left-body {
+  position: absolute;
+  left: 5px;
+  background: #efefef;
+}
+.right-body {
+  float: left;
+  display: block;
+  width: 99%;
+  height: 100%;
+  padding-left: 170px;
+  box-sizing: border-box;
+}

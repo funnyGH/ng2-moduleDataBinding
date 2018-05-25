@@ -1,0 +1,16 @@
+<title>模版语法</title>
+<div class='content'>
+  <ul>
+    <li *ngFor='let item of odata.data;let i = index;' [hidden]='item.tips == ""'>
+      <h3>{{i+1}}. {{item.title}}</h3>
+      <p>{{item.des}}</p>
+      <p>{{item.details}}</p>
+      <span *ngIf='item.tips.length > 0' style='color: red;'>
+        tips:
+      </span>
+      <span *ngFor='let tips of item.tips;let j = index;'>
+        {{j+1}}）{{tips}}
+      </span>
+    </li>
+  </ul>
+</div>
